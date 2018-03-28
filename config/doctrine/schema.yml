@@ -1,0 +1,59 @@
+Clientes:
+  actAs: [Timestampable]
+  tableName: sf_clientes
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+    nombre:   string(255), notnull: true
+    nombre_tag:   string(255), notnull: true
+    telefono:  string(255), notnull: true
+    email:   string(255), notnull: true
+    direccion: string(255), notnull: true
+    
+Contactos:
+  actAs: [Timestampable]
+  tableName: sf_contactos
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+    cliente_id: integer
+    nombre: string(255), notnull: true
+    funcion: string(255), notnull: true
+    cargo: string(255), notnull: true
+  relations:
+    Clientes:
+      class: Clientes
+      local: cliente_id
+      foreign: id
+      foreignAlias: Contactos
+      type: one
+      foreignType: many
+
+Remitentes:
+  actAs: [Timestampable]
+  tableName: sf_remitentes
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+    nombre:   string(255), notnull: true
+    direccion:   string(255), notnull: true
+    telefono:   string(255), notnull: true
+    ciudad:   string(255), notnull: true
+
+Plantillas:
+  actAs: [Timestampable]
+  tableName: sf_plantillas
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+    nombre:   string(255), notnull: true
+    clientes_id: string(255), notnull: true
+    contactos_id: string(255), notnull: true
