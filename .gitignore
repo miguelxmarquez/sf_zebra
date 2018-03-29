@@ -1,7 +1,6 @@
 # Cache and logs (Symfony2)
 /cache/
 /log/
-/lib/vendor/
 /data/fixture/
 
 # Assets and user uploads
