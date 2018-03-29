@@ -10,14 +10,14 @@
  * @property string $clientes_id
  * @property string $contactos_id
  * 
- * @method integer    getId()           Returns the current record's "id" value
- * @method string     getNombre()       Returns the current record's "nombre" value
- * @method string     getClientesId()   Returns the current record's "clientes_id" value
- * @method string     getContactosId()  Returns the current record's "contactos_id" value
- * @method Plantillas setId()           Sets the current record's "id" value
- * @method Plantillas setNombre()       Sets the current record's "nombre" value
- * @method Plantillas setClientesId()   Sets the current record's "clientes_id" value
- * @method Plantillas setContactosId()  Sets the current record's "contactos_id" value
+ * @method integer    get()             Returns the current record's "id" value
+ * @method string     get()             Returns the current record's "nombre" value
+ * @method string     get()             Returns the current record's "clientes_id" value
+ * @method string     get()             Returns the current record's "contactos_id" value
+ * @method Plantillas set()             Sets the current record's "id" value
+ * @method Plantillas set()             Sets the current record's "nombre" value
+ * @method Plantillas set()             Sets the current record's "clientes_id" value
+ * @method Plantillas set()             Sets the current record's "contactos_id" value
  * 
  * @package    zebra
  * @subpackage model

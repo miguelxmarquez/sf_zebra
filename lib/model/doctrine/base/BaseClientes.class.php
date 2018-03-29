@@ -13,20 +13,20 @@
  * @property string $direccion
  * @property Doctrine_Collection $Contactos
  * 
- * @method integer             getId()         Returns the current record's "id" value
- * @method string              getNombre()     Returns the current record's "nombre" value
- * @method string              getNombreTag()  Returns the current record's "nombre_tag" value
- * @method string              getTelefono()   Returns the current record's "telefono" value
- * @method string              getEmail()      Returns the current record's "email" value
- * @method string              getDireccion()  Returns the current record's "direccion" value
- * @method Doctrine_Collection getContactos()  Returns the current record's "Contactos" collection
- * @method Clientes            setId()         Sets the current record's "id" value
- * @method Clientes            setNombre()     Sets the current record's "nombre" value
- * @method Clientes            setNombreTag()  Sets the current record's "nombre_tag" value
- * @method Clientes            setTelefono()   Sets the current record's "telefono" value
- * @method Clientes            setEmail()      Sets the current record's "email" value
- * @method Clientes            setDireccion()  Sets the current record's "direccion" value
- * @method Clientes            setContactos()  Sets the current record's "Contactos" collection
+ * @method integer             get()           Returns the current record's "id" value
+ * @method string              get()           Returns the current record's "nombre" value
+ * @method string              get()           Returns the current record's "nombre_tag" value
+ * @method string              get()           Returns the current record's "telefono" value
+ * @method string              get()           Returns the current record's "email" value
+ * @method string              get()           Returns the current record's "direccion" value
+ * @method Doctrine_Collection get()           Returns the current record's "Contactos" collection
+ * @method Clientes            set()           Sets the current record's "id" value
+ * @method Clientes            set()           Sets the current record's "nombre" value
+ * @method Clientes            set()           Sets the current record's "nombre_tag" value
+ * @method Clientes            set()           Sets the current record's "telefono" value
+ * @method Clientes            set()           Sets the current record's "email" value
+ * @method Clientes            set()           Sets the current record's "direccion" value
+ * @method Clientes            set()           Sets the current record's "Contactos" collection
  * 
  * @package    zebra
  * @subpackage model

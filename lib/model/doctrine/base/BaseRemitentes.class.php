@@ -11,16 +11,16 @@
  * @property string $telefono
  * @property string $ciudad
  * 
- * @method integer    getId()        Returns the current record's "id" value
- * @method string     getNombre()    Returns the current record's "nombre" value
- * @method string     getDireccion() Returns the current record's "direccion" value
- * @method string     getTelefono()  Returns the current record's "telefono" value
- * @method string     getCiudad()    Returns the current record's "ciudad" value
- * @method Remitentes setId()        Sets the current record's "id" value
- * @method Remitentes setNombre()    Sets the current record's "nombre" value
- * @method Remitentes setDireccion() Sets the current record's "direccion" value
- * @method Remitentes setTelefono()  Sets the current record's "telefono" value
- * @method Remitentes setCiudad()    Sets the current record's "ciudad" value
+ * @method integer    get()          Returns the current record's "id" value
+ * @method string     get()          Returns the current record's "nombre" value
+ * @method string     get()          Returns the current record's "direccion" value
+ * @method string     get()          Returns the current record's "telefono" value
+ * @method string     get()          Returns the current record's "ciudad" value
+ * @method Remitentes set()          Sets the current record's "id" value
+ * @method Remitentes set()          Sets the current record's "nombre" value
+ * @method Remitentes set()          Sets the current record's "direccion" value
+ * @method Remitentes set()          Sets the current record's "telefono" value
+ * @method Remitentes set()          Sets the current record's "ciudad" value
  * 
  * @package    zebra
  * @subpackage model

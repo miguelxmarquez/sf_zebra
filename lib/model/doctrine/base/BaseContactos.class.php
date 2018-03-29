@@ -12,18 +12,18 @@
  * @property string $cargo
  * @property Clientes $Clientes
  * 
- * @method integer   getId()         Returns the current record's "id" value
- * @method integer   getClienteId()  Returns the current record's "cliente_id" value
- * @method string    getNombre()     Returns the current record's "nombre" value
- * @method string    getFuncion()    Returns the current record's "funcion" value
- * @method string    getCargo()      Returns the current record's "cargo" value
- * @method Clientes  getClientes()   Returns the current record's "Clientes" value
- * @method Contactos setId()         Sets the current record's "id" value
- * @method Contactos setClienteId()  Sets the current record's "cliente_id" value
- * @method Contactos setNombre()     Sets the current record's "nombre" value
- * @method Contactos setFuncion()    Sets the current record's "funcion" value
- * @method Contactos setCargo()      Sets the current record's "cargo" value
- * @method Contactos setClientes()   Sets the current record's "Clientes" value
+ * @method integer   get()           Returns the current record's "id" value
+ * @method integer   get()           Returns the current record's "cliente_id" value
+ * @method string    get()           Returns the current record's "nombre" value
+ * @method string    get()           Returns the current record's "funcion" value
+ * @method string    get()           Returns the current record's "cargo" value
+ * @method Clientes  get()           Returns the current record's "Clientes" value
+ * @method Contactos set()           Sets the current record's "id" value
+ * @method Contactos set()           Sets the current record's "cliente_id" value
+ * @method Contactos set()           Sets the current record's "nombre" value
+ * @method Contactos set()           Sets the current record's "funcion" value
+ * @method Contactos set()           Sets the current record's "cargo" value
+ * @method Contactos set()           Sets the current record's "Clientes" value
  * 
  * @package    zebra
  * @subpackage model
