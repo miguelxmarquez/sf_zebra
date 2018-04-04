@@ -1,6 +1,6 @@
-Clientes:
+Cliente:
   actAs: [Timestampable]
-  tableName: sf_clientes
+  tableName: cliente
   columns:
     id:
       type: integer
@@ -11,10 +11,26 @@ Clientes:
     telefono:  string(255), notnull: true
     email:   string(255), notnull: true
     direccion: string(255), notnull: true
-    
-Contactos:
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+        options:
+          notnull: false
+          required: false
+      updated:
+        name: updated_at
+        type: timestamp
+        format: Y-m-d H:i:s
+        options:
+          notnull: false
+          required: false
+
+Contacto:
   actAs: [Timestampable]
-  tableName: sf_contactos
+  tableName: contacto
   columns:
     id:
       type: integer
@@ -24,18 +40,34 @@ Contactos:
     nombre: string(255), notnull: true
     funcion: string(255), notnull: true
     cargo: string(255), notnull: true
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+        options:
+          notnull: false
+          required: false
+      updated:
+        name: updated_at
+        type: timestamp
+        format: Y-m-d H:i:s
+        options:
+          notnull: false
+          required: false
   relations:
-    Clientes:
-      class: Clientes
+    Cliente:
+      class: Cliente
       local: cliente_id
       foreign: id
-      foreignAlias: Contactos
+      foreignAlias: Contacto
       type: one
       foreignType: many
 
-Remitentes:
+Remitente:
   actAs: [Timestampable]
-  tableName: sf_remitentes
+  tableName: remitente
   columns:
     id:
       type: integer
@@ -45,15 +77,62 @@ Remitentes:
     direccion:   string(255), notnull: true
     telefono:   string(255), notnull: true
     ciudad:   string(255), notnull: true
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+        options:
+          notnull: false
+          required: false
+      updated:
+        name: updated_at
+        type: timestamp
+        format: Y-m-d H:i:s
+        options:
+          notnull: false
+          required: false
 
-Plantillas:
+Plantilla:
   actAs: [Timestampable]
-  tableName: sf_plantillas
+  tableName: plantilla
   columns:
     id:
       type: integer
       primary: true
       autoincrement: true
     nombre:   string(255), notnull: true
-    clientes_id: string(255), notnull: true
-    contactos_id: string(255), notnull: true
+    cliente_id: string(255), notnull: true
+    contacto_id: string(255), notnull: true
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+        options:
+          notnull: false
+          required: false
+      updated:
+        name: updated_at
+        type: timestamp
+        format: Y-m-d H:i:s
+        options:
+          notnull: false
+          required: false
+  relations:
+    Cliente:
+      class: Cliente
+      local: cliente_id
+      foreign: id
+      foreignAlias: Plantilla
+      type: one
+      foreignType: many
+    Contacto:
+      class: Contacto
+      local: contacto_id
+      foreign: id
+      foreignAlias: Cliente
+      type: one
+      foreignType: many

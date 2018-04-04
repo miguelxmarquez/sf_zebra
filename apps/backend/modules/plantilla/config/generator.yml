@@ -1,0 +1,38 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Plantilla
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              Plantilla
+    plural:                Plantillas
+    route_prefix:          plantilla
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        _new: { label: "Crear Nueva Plantilla" }
+        _edit: { label: "Editar" }
+        _delete: { label: "Eliminar" }
+        _imprimir: 
+      fields:
+        nombre:       { label: Nombre}
+      list:
+        title:          Plantillas
+        batch_actions:
+          _delete:      ~
+          _imprimir:    ~
+        display:        [nombre, cliente_id, contacto_id]
+        max_per_page:   5
+        sort:           [nombre, asc]
+      filter:
+        display:        [nombre, cliente_id, contacto_id]
+      form:    ~
+      edit:
+        title:          Editando la Plantilla "%%nombre%%"
+        display:        [nombre, cliente_id, contacto_id]
+      new:
+        display:        [nombre, cliente_id, contacto_id]
+        title:          Nueva Plantilla

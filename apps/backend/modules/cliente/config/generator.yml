@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Cliente
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              Cliente
+    plural:                Clientes
+    route_prefix:          cliente
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        _new: { label: "Crear Nuevo Cliente" }
+        _edit: { label: "Editar" }
+        _delete: { label: "Eliminar" }
+      fields:
+        nombre:       { label: Nombre}
+      list:
+        title:          Clientes
+        display:        [nombre, nombre_tag, telefono, email, direccion]
+        max_per_page:   5
+        sort:           [nombre, asc]
+      filter:
+        display:        [nombre, nombre_tag, telefono, email, direccion]
+      form:    ~
+      edit:
+        title:          Editando la Cliente "%%nombre%%"
+        display:        [nombre, nombre_tag, telefono, email, direccion]
+      new:
+        display:        [nombre, nombre_tag, telefono, email, direccion]
+        title:          Nuevo Cliente

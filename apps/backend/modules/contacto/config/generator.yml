@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Contacto
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          contacto
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        _new: { label: "Crear Nuevo Contacto" }
+        _edit: { label: "Editar" }
+        _delete: { label: "Eliminar" }
+      fields:
+        nombre:       { label: Nombre}
+      list:
+        title:          Contactos
+        display:        [cliente_id, nombre, funcion, cargo]
+        max_per_page:   5
+        sort:           [nombre, asc]
+      filter:
+        display:        [cliente_id, nombre, funcion, cargo]
+      form:    ~
+      edit:
+        title:          Editando el Contacto "%%nombre%%"
+        display:        [cliente_id, nombre, funcion, cargo]
+      new:
+        display:        [cliente_id, nombre, funcion, cargo]
+        title:          Nuevo Contacto
