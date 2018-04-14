@@ -8,7 +8,7 @@ require_once dirname(__FILE__).'/../lib/plantillaGeneratorHelper.class.php';
  *
  * @package    zebra
  * @subpackage plantilla
- * @author     Your name here
+ * @author     Miguel Márquez
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
 class plantillaActions extends autoPlantillaActions
@@ -24,12 +24,13 @@ class plantillaActions extends autoPlantillaActions
  
 	    foreach ($q->execute() as $plantilla)
     	{
-      		//print($plantilla);
+      		print($plantilla);
     	}
  
-    	$this->getUser()->setFlash('notice', 'La seleccion sera enviada a la impresora Zebra');
+    	$this->getUser()->setFlash('notice', 'La seleccion: ' . print_r($ids) . ' sera enviada a la impresora Zebra');
  
     	$this->redirect('plantilla');
+
   	}
 
 }
