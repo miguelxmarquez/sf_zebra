@@ -16,7 +16,7 @@ generator:
         _new: { label: "Crear Nueva Plantilla" }
         _edit: { label: "Editar" }
         _delete: { label: "Eliminar" }
-        _imprimir: 
+        _imprimir: { label: "Imprimir" }
       fields:
         nombre:       { label: Nombre}
       list:
