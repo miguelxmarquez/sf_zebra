@@ -5,17 +5,34 @@ generator:
     theme:                 admin
     non_verbose_templates: true
     with_show:             false
-    singular:              ~
-    plural:                ~
+    singular:              Etiqueta
+    plural:                Etiquetas
     route_prefix:          etiqueta
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
     config:
-      actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
+      actions:
+        _new: { label: "Crear Nueva Etiqueta" }
+        _edit: { label: "Editar" }
+        _delete: { label: "Eliminar" }
+        imprimir: { label: "Imprimir" }
+      fields:
+        nombre:       { label: Nombre}
+      list:
+        title:          Etiquetas
+        batch_actions:
+          _delete:      ~
+          _imprimir:    ~
+        display:        [nombre, cliente_id, contacto_id]
+        max_per_page:   5
+        sort:           [nombre, asc]
+      filter:
+        display:        [nombre, cliente_id, contacto_id]
       form:    ~
-      edit:    ~
-      new:     ~
+      edit:
+        title:          Editando la Etiqueta "%%nombre%%"
+        display:        [nombre, cliente_id, contacto_id]
+      new:
+        display:        [nombre, cliente_id, contacto_id]
+        title:          Nueva Etiqueta
