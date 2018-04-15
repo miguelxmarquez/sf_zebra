@@ -7,23 +7,14 @@
  * 
  * @property integer $id
  * @property string $nombre
- * @property string $cliente_id
- * @property string $contacto_id
- * @property Cliente $Cliente
- * @property Contacto $Contacto
+ * @property string $parametros
  * 
- * @method integer   getId()          Returns the current record's "id" value
- * @method string    getNombre()      Returns the current record's "nombre" value
- * @method string    getClienteId()   Returns the current record's "cliente_id" value
- * @method string    getContactoId()  Returns the current record's "contacto_id" value
- * @method Cliente   getCliente()     Returns the current record's "Cliente" value
- * @method Contacto  getContacto()    Returns the current record's "Contacto" value
- * @method Plantilla setId()          Sets the current record's "id" value
- * @method Plantilla setNombre()      Sets the current record's "nombre" value
- * @method Plantilla setClienteId()   Sets the current record's "cliente_id" value
- * @method Plantilla setContactoId()  Sets the current record's "contacto_id" value
- * @method Plantilla setCliente()     Sets the current record's "Cliente" value
- * @method Plantilla setContacto()    Sets the current record's "Contacto" value
+ * @method integer   getId()         Returns the current record's "id" value
+ * @method string    getNombre()     Returns the current record's "nombre" value
+ * @method string    getParametros() Returns the current record's "parametros" value
+ * @method Plantilla setId()         Sets the current record's "id" value
+ * @method Plantilla setNombre()     Sets the current record's "nombre" value
+ * @method Plantilla setParametros() Sets the current record's "parametros" value
  * 
  * @package    zebra
  * @subpackage model
@@ -44,11 +35,7 @@ abstract class BasePlantilla extends sfDoctrineRecord
              'type' => 'string',
              'length' => 255,
              ));
-        $this->hasColumn('cliente_id', 'string', 255, array(
-             'type' => 'string',
-             'length' => 255,
-             ));
-        $this->hasColumn('contacto_id', 'string', 255, array(
+        $this->hasColumn('parametros', 'string', 255, array(
              'type' => 'string',
              'length' => 255,
              ));
@@ -57,14 +44,6 @@ abstract class BasePlantilla extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('Cliente', array(
-             'local' => 'cliente_id',
-             'foreign' => 'id'));
-
-        $this->hasOne('Contacto', array(
-             'local' => 'contacto_id',
-             'foreign' => 'id'));
-
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              'created' => 
              array(

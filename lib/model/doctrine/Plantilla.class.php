@@ -16,4 +16,22 @@ class Plantilla extends BasePlantilla
   	{
     	return $this->getNombre();
   	}
+
+	public function Imprimir($ids){
+		
+		$parametros = implode(',', $ids);
+
+		$this->setNombre('Test');
+		$this->setParametros($parametros);
+		$now = date('Y-m-d h:i:s', time());
+		$this->setUpdatedAt($now);		
+		$this->save();
+		//return true;
+	}
+
+	public function getCliente(){
+		$cliente = new Cliente();
+		$cliente->getNombre(); 
+		return $nombre;
+	}
 }

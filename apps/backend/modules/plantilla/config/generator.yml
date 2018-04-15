@@ -16,7 +16,7 @@ generator:
         _new: { label: "Crear Nueva Plantilla" }
         _edit: { label: "Editar" }
         _delete: { label: "Eliminar" }
-        _imprimir: { label: "Imprimir" }
+        imprimir: { label: "Imprimir" }
       fields:
         nombre:       { label: Nombre}
       list:
@@ -24,15 +24,3 @@ generator:
         batch_actions:
           _delete:      ~
           _imprimir:    ~
-        display:        [nombre, cliente_id, contacto_id]
-        max_per_page:   5
-        sort:           [nombre, asc]
-      filter:
-        display:        [nombre, cliente_id, contacto_id]
-      form:    ~
-      edit:
-        title:          Editando la Plantilla "%%nombre%%"
-        display:        [nombre, cliente_id, contacto_id]
-      new:
-        display:        [nombre, cliente_id, contacto_id]
-        title:          Nueva Plantilla

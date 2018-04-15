@@ -12,7 +12,7 @@
  * @property string $email
  * @property string $direccion
  * @property Doctrine_Collection $Contacto
- * @property Doctrine_Collection $Plantilla
+ * @property Doctrine_Collection $Cliente
  * 
  * @method integer             getId()         Returns the current record's "id" value
  * @method string              getNombre()     Returns the current record's "nombre" value
@@ -21,7 +21,7 @@
  * @method string              getEmail()      Returns the current record's "email" value
  * @method string              getDireccion()  Returns the current record's "direccion" value
  * @method Doctrine_Collection getContacto()   Returns the current record's "Contacto" collection
- * @method Doctrine_Collection getPlantilla()  Returns the current record's "Plantilla" collection
+ * @method Doctrine_Collection getCliente()    Returns the current record's "Cliente" collection
  * @method Cliente             setId()         Sets the current record's "id" value
  * @method Cliente             setNombre()     Sets the current record's "nombre" value
  * @method Cliente             setNombreTag()  Sets the current record's "nombre_tag" value
@@ -29,7 +29,7 @@
  * @method Cliente             setEmail()      Sets the current record's "email" value
  * @method Cliente             setDireccion()  Sets the current record's "direccion" value
  * @method Cliente             setContacto()   Sets the current record's "Contacto" collection
- * @method Cliente             setPlantilla()  Sets the current record's "Plantilla" collection
+ * @method Cliente             setCliente()    Sets the current record's "Cliente" collection
  * 
  * @package    zebra
  * @subpackage model
@@ -75,7 +75,7 @@ abstract class BaseCliente extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'cliente_id'));
 
-        $this->hasMany('Plantilla', array(
+        $this->hasMany('Etiqueta as Cliente', array(
              'local' => 'id',
              'foreign' => 'cliente_id'));
 

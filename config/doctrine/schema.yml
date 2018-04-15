@@ -94,9 +94,9 @@ Remitente:
           notnull: false
           required: false
 
-Plantilla:
+Etiqueta:
   actAs: [Timestampable]
-  tableName: plantilla
+  tableName: etiqueta
   columns:
     id:
       type: integer
@@ -126,13 +126,40 @@ Plantilla:
       class: Cliente
       local: cliente_id
       foreign: id
-      foreignAlias: Plantilla
+      foreignAlias: Cliente
       type: one
       foreignType: many
     Contacto:
       class: Contacto
       local: contacto_id
       foreign: id
-      foreignAlias: Cliente
+      foreignAlias: Contacto
       type: one
       foreignType: many
+
+Plantilla:
+  actAs: [Timestampable]
+  tableName: plantilla
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+    nombre:   string(255), notnull: true
+    parametros: string(255), notnull: true
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+        options:
+          notnull: false
+          required: false
+      updated:
+        name: updated_at
+        type: timestamp
+        format: Y-m-d H:i:s
+        options:
+          notnull: false
+          required: false

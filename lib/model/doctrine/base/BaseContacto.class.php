@@ -11,19 +11,22 @@
  * @property string $funcion
  * @property string $cargo
  * @property Cliente $Cliente
+ * @property Doctrine_Collection $Contacto
  * 
- * @method integer  getId()         Returns the current record's "id" value
- * @method integer  getClienteId()  Returns the current record's "cliente_id" value
- * @method string   getNombre()     Returns the current record's "nombre" value
- * @method string   getFuncion()    Returns the current record's "funcion" value
- * @method string   getCargo()      Returns the current record's "cargo" value
- * @method Cliente  getCliente()    Returns the current record's "Cliente" value
- * @method Contacto setId()         Sets the current record's "id" value
- * @method Contacto setClienteId()  Sets the current record's "cliente_id" value
- * @method Contacto setNombre()     Sets the current record's "nombre" value
- * @method Contacto setFuncion()    Sets the current record's "funcion" value
- * @method Contacto setCargo()      Sets the current record's "cargo" value
- * @method Contacto setCliente()    Sets the current record's "Cliente" value
+ * @method integer             getId()         Returns the current record's "id" value
+ * @method integer             getClienteId()  Returns the current record's "cliente_id" value
+ * @method string              getNombre()     Returns the current record's "nombre" value
+ * @method string              getFuncion()    Returns the current record's "funcion" value
+ * @method string              getCargo()      Returns the current record's "cargo" value
+ * @method Cliente             getCliente()    Returns the current record's "Cliente" value
+ * @method Doctrine_Collection getContacto()   Returns the current record's "Contacto" collection
+ * @method Contacto            setId()         Sets the current record's "id" value
+ * @method Contacto            setClienteId()  Sets the current record's "cliente_id" value
+ * @method Contacto            setNombre()     Sets the current record's "nombre" value
+ * @method Contacto            setFuncion()    Sets the current record's "funcion" value
+ * @method Contacto            setCargo()      Sets the current record's "cargo" value
+ * @method Contacto            setCliente()    Sets the current record's "Cliente" value
+ * @method Contacto            setContacto()   Sets the current record's "Contacto" collection
  * 
  * @package    zebra
  * @subpackage model
@@ -63,6 +66,10 @@ abstract class BaseContacto extends sfDoctrineRecord
         $this->hasOne('Cliente', array(
              'local' => 'cliente_id',
              'foreign' => 'id'));
+
+        $this->hasMany('Etiqueta as Contacto', array(
+             'local' => 'id',
+             'foreign' => 'contacto_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              'created' => 
