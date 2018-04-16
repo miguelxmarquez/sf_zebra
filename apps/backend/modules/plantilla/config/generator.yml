@@ -16,6 +16,7 @@ generator:
         _new: { label: "Crear Nueva Plantilla" }
         _edit: { label: "Editar" }
         _delete: { label: "Eliminar" }
+        _back: { label: 'Volver'}
         imprimir: { label: "Imprimir" }
       fields:
         nombre:       { label: Nombre}
@@ -30,7 +31,7 @@ generator:
           imprimir:    ~
         display:      [nombre, parametros, created_at]
         max_per_page:   5
-        sort:           [nombre, asc]
+        sort:           [created_at, desc]
       filter:
         display:        [nombre]
       form:    ~
