@@ -49,7 +49,7 @@ remitente:
 # default rules
 homepage:
   url:   /
-  param: { module: plantilla, action: index }
+  param: { module: etiqueta, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules
