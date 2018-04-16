@@ -14,7 +14,7 @@
         <div class="header">
       <div class="content">
         <h1>
-          <a href="<?php echo url_for('plantilla/index') ?>">
+          <a href="<?php echo url_for('homepage') ?>">
             <img src="/images/logo-header.png" alt="Zebra Board" />
           </a>
         </h1>
@@ -23,18 +23,6 @@
     </div>
  
       <div id="content">
-        <?php if ($sf_user->hasFlash('notice')): ?>
-          <div class="flash_notice">
-            <?php echo $sf_user->getFlash('notice') ?>
-          </div>
-        <?php endif; ?>
- 
-        <?php if ($sf_user->hasFlash('error')): ?>
-          <div class="flash_error">
-            <?php echo $sf_user->getFlash('error') ?>
-          </div>
-        <?php endif; ?>
- 
         <div class="content">
           <?php echo $sf_content ?>
         </div>
