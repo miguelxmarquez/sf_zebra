@@ -1,0 +1,15 @@
+{
+    "name": "miguelxmarquez/sf_zebra",
+    "description": "Zebra Print System with QZ and Symfony 1.4",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Miguel Márquez",
+            "email": "miguelxmarquez@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^1.23"
+    }
+}
