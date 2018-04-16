@@ -17,21 +17,18 @@ class Plantilla extends BasePlantilla
     	return $this->getNombre();
   	}
 
-	public function Imprimir($ids){
-		
-		$parametros = implode(',', $ids);
+	public function Imprimir($ids, $reg){
 
-		$this->setNombre('Test');
-		$this->setParametros($parametros);
+		// Obtiene la fecha
 		$now = date('Y-m-d h:i:s', time());
+		// Asigna Ids a Parametros
+		$parametros = implode(',', $ids);
+		// Asigna valores a modelo		
+		$this->setNombre($now);
+		$this->setParametros($parametros);
 		$this->setUpdatedAt($now);		
 		$this->save();
-		//return true;
+		return true;
 	}
 
-	public function getCliente(){
-		$cliente = new Cliente();
-		$cliente->getNombre(); 
-		return $nombre;
-	}
 }

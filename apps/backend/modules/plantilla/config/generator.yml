@@ -19,8 +19,24 @@ generator:
         imprimir: { label: "Imprimir" }
       fields:
         nombre:       { label: Nombre}
+        created_at:   { label: Fecha de Creacion}
       list:
+        fields:
+          nombre:       { label: Nombre}
+          created_at:   { label: Fecha de Creacion}
         title:          Plantillas
         batch_actions:
           _delete:      ~
-          _imprimir:    ~
+          imprimir:    ~
+        display:      [nombre, parametros, created_at]
+        max_per_page:   5
+        sort:           [nombre, asc]
+      filter:
+        display:        [nombre]
+      form:    ~
+      edit:
+        title:          Editando la Plantilla "%%nombre%%"
+        display:        [nombre]
+      new:
+        display:        [nombre, parametros]
+        title:          Nueva Plantilla

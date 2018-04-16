@@ -45,10 +45,10 @@
           <div class="menu">
             <div>
               <ul>
+                <li><a href="<?php echo url_for('etiqueta/index') ?>">Etiquetas</a></li>
                 <li><a href="<?php echo url_for('cliente/index') ?>">Clientes</a></li>
                 <li><a href="<?php echo url_for('contacto/index') ?>">Contactos</a></li>
                 <li><a href="<?php echo url_for('remitente/index') ?>">Remitentes</a></li>
-                <li><a href="<?php echo url_for('etiqueta/index') ?>">Etiquetas</a></li>
                 <li><a href="<?php echo url_for('plantilla/index') ?>">Plantillas</a></li>
 
               </ul>

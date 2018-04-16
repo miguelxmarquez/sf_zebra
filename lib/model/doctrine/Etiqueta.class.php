@@ -12,5 +12,14 @@
  */
 class Etiqueta extends BaseEtiqueta
 {
+    public function __toString()
+    {
+      return $this->getNombre();
+    }
+    
+    public function getCliente(){
+		$cliente = new Cliente();
+		return $cliente->getNombre(); 
+	}
 
 }

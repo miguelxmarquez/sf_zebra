@@ -13,4 +13,27 @@ require_once dirname(__FILE__).'/../lib/etiquetaGeneratorHelper.class.php';
  */
 class etiquetaActions extends autoEtiquetaActions
 {
+
+    public function executeBatchImprimir(sfWebRequest $request)
+  	{
+    	$ids = $request->getParameter('ids');
+		$plantilla = new Plantilla();
+    	$q = Doctrine_Query::create()
+      	->from('Plantilla p')
+      	->whereIn('p.id', $ids);
+ 
+	    $reg = $q->execute();
+    	
+      	if ($plantilla->Imprimir($ids, $reg) !== FALSE) {
+            // Envia mensaje de ejecucion exitosa
+            $this->getUser()->setFlash('notice', 'La seleccion: ' . print_r($ids) . ' sera enviada a la impresora Zebra');
+            // Redirige a Modulo Etiqueta
+            $this->redirect('etiqueta');
+        }else{
+            $this->getUser()->setFlash('error', 'La seleccion: ' . print_r($ids) . ' Error, intente mas tarde');
+        }
+    	
+ 
+
+  	}
 }

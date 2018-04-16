@@ -14,23 +14,6 @@ require_once dirname(__FILE__).'/../lib/plantillaGeneratorHelper.class.php';
 class plantillaActions extends autoPlantillaActions
 {
 
-	public function executeBatchImprimir(sfWebRequest $request)
-  	{
-    	$ids = $request->getParameter('ids');
-		$plantilla = new Plantilla();
-    	$q = Doctrine_Query::create()
-      	->from('Plantilla p')
-      	->whereIn('p.id', $ids);
- 
-	    //foreach ($q->execute() as $plantilla)
-    	//{
-      		$plantilla->Imprimir($ids);
-    	//}
- 
-    	$this->getUser()->setFlash('notice', 'La seleccion: ' . print_r($ids) . ' sera enviada a la impresora Zebra');
- 
-    	$this->redirect('plantilla');
-
-  	}
+	
 
 }
