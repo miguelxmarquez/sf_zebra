@@ -29,6 +29,7 @@ class Plantilla extends BasePlantilla
 		$this->setParametros($parametros);
 		$this->setUpdatedAt($now);		
 		$this->save();
+		
 		return true;
 	}
 

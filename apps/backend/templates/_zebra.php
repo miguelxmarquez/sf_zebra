@@ -86,11 +86,10 @@
 
 
         function imprimir() {
-          
             var config = qz.configs.create(printer);
 
             var data = [
-                <?php echo json_encode($arrayPHP) ?>
+                <?php echo $tagg ?>
             ];
 
 
@@ -133,6 +132,7 @@
                 <li><a href="<?php echo url_for('contacto/index') ?>">Contactos</a></li>
                 <li><a href="<?php echo url_for('remitente/index') ?>">Remitentes</a></li>
                 <li><a href="<?php echo url_for('plantilla/index') ?>">Plantillas</a></li>
+
               </ul>
             </div>
           </div>

@@ -23,6 +23,8 @@ class etiquetaActions extends autoEtiquetaActions
             // Envia mensaje de ejecucion exitosa
             $this->getUser()->setFlash('notice', 'La seleccion: ' . print_r($ids) . ' sera enviada a la impresora Zebra');
             // Redirige a Modulo Etiqueta
+            //$this->renderPartial('global/zebra');
+		
             $this->redirect('plantilla');
         }else{
             $this->getUser()->setFlash('error', 'La seleccion: ' . print_r($ids) . ' Error, intente mas tarde');
