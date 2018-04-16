@@ -17,7 +17,15 @@ class etiquetaActions extends autoEtiquetaActions
     public function executeBatchImprimir(sfWebRequest $request)
   	{
     	$ids = $request->getParameter('ids');
-		$plantilla = new Plantilla();
+        $plantilla = new Plantilla();
+        
+        // $q = Doctrine_Core::getTable('Contacto')
+        // ->createQuery('c')
+        // ->where('c.contacto_id = ?', $ids)
+        // ->innerJoin('c.cliente_id')
+        // ->orderBy('c.created_at ASC');
+        // $records = $q->execute();
+
     	
       	if ($plantilla->Imprimir($ids) !== FALSE) {
             // Envia mensaje de ejecucion exitosa
