@@ -13,13 +13,13 @@ generator:
 
     config:
       actions:
-        _new: { label: "Crear Nueva Plantilla" }
-        _edit: { label: "Editar" }
-        _delete: { label: "Eliminar" }
-        imprimir: { label: "Imprimir" }
+        _new:           { label: "Crear Nueva Plantilla" }
+        _edit:          { label: "Editar" }
+        _delete:        { label: "Eliminar" }
+        imprimir:       { label: "Imprimir" }
       fields:
-        nombre:       { label: Nombre}
-        created_at:   { label: Fecha de Creacion}
+        nombre:         { label: Nombre}
+        created_at:     { label: Fecha de Creacion}
       list:
         fields:
           nombre:       { label: Nombre}
@@ -27,8 +27,8 @@ generator:
         title:          Plantillas
         batch_actions:
           _delete:      ~
-          imprimir:    ~
-        display:      [nombre, parametros, created_at]
+          imprimir:     ~
+        display:        [nombre, parametros, created_at]
         max_per_page:   5
         sort:           [created_at, desc]
       filter:
