@@ -24,7 +24,7 @@ generator:
         batch_actions:
           _delete:      ~
           _imprimir:    ~
-        display:        [nombre, cliente_id, contacto_id]
+        display:        [nombre, clienteNombre, contactoNombre]
         max_per_page:   5
         sort:           [nombre, asc]
       filter:

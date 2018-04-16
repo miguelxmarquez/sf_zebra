@@ -16,4 +16,10 @@ class Contacto extends BaseContacto
   	{
     	return $this->getNombre();
   	}
+
+	public function getClienteNombre(){
+		$cliente = new Cliente();
+		$nombre = $cliente->getNombre();
+	return $nombre; 
+	}
 }

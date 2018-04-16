@@ -17,9 +17,16 @@ class Etiqueta extends BaseEtiqueta
       return $this->getNombre();
     }
     
-    public function getCliente(){
-		$cliente = new Cliente();
-		return $cliente->getNombre(); 
-	}
+    public function getClienteNombre(){
+      $cliente = new Cliente();
+      $nombre = $cliente->getNombre();
+      return $nombre; 
+    }
+
+    public function getContactoNombre(){
+      $contacto = new Contacto();
+      $nombre = $contacto->getNombre(); 
+      return $nombre; 
+    }
 
 }

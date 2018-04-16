@@ -20,7 +20,7 @@ generator:
         nombre:       { label: Nombre}
       list:
         title:          Contactos
-        display:        [cliente_id, nombre, funcion, cargo]
+        display:        [clienteNombre, nombre, funcion, cargo]
         max_per_page:   5
         sort:           [nombre, asc]
       filter:
