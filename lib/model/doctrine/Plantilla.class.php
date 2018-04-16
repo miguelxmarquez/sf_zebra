@@ -17,14 +17,14 @@ class Plantilla extends BasePlantilla
     	return $this->getNombre();
   	}
 
-	public function Imprimir($ids, $reg){
-		
+	public function Imprimir($ids){	
 		// Obtiene la fecha
 		$now = date('Y-m-d h:i:s A', time());
 		// Asigna Ids a Parametros
 		$parametros = implode(',', $ids);
-		// Asigna valores a modelo
+		// Nombre Temporal
 		$nombre = 'Plantilla '; 		
+		// Asigna valores a modelo
 		$this->setNombre($nombre.$now);
 		$this->setParametros($parametros);
 		$this->setUpdatedAt($now);		
