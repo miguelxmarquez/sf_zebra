@@ -18,13 +18,8 @@ class etiquetaActions extends autoEtiquetaActions
   	{
     	$ids = $request->getParameter('ids');
 		$plantilla = new Plantilla();
-    	$q = Doctrine_Query::create()
-      	->from('Plantilla p')
-      	->whereIn('p.id', $ids);
- 
-	    $reg = $q->execute();
     	
-      	if ($plantilla->Imprimir($ids, $reg) !== FALSE) {
+      	if ($plantilla->Imprimir($ids) !== FALSE) {
             // Envia mensaje de ejecucion exitosa
             $this->getUser()->setFlash('notice', 'La seleccion: ' . print_r($ids) . ' sera enviada a la impresora Zebra');
             // Redirige a Modulo Etiqueta
