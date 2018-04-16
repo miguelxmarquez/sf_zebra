@@ -1,13 +1,10 @@
-# Cache and logs (Symfony2)
+# Cache and logs (Symfony)
 /cache/
 /log/
 /data/fixture/
 
 # Assets and user uploads
 /web/uploads/
-
-# Email spool folder
-/app/spool/*
 
 # Parameters
 /app/config/parameters.yml
