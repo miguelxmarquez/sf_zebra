@@ -40,7 +40,6 @@ class etiquetaActions extends autoEtiquetaActions
     
     public function ImprimeTag($ids)
     {
-        $resultado = [];
         # Recorremos todos los registros
         foreach ($ids as $key => $value) {
         # Realizamos la consulta a la BD
@@ -66,6 +65,9 @@ class etiquetaActions extends autoEtiquetaActions
         //     'remitente_dir' => 'Calle 39N, #4-13B.',
         // );
         }
+
+        $this->Resultado = $result;
+
         return $result;
     }
 }

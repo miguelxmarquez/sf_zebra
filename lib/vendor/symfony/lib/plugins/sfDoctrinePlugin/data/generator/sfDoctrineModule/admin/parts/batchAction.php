@@ -43,7 +43,7 @@
     $this->redirect('@<?php echo $this->getUrlForAction('list') ?>');
   }
 
-  protected function executeBatchDelete(sfWebRequest $request)
+  protected function executeBatchDelete(sfWebRequest $request)  
   {
     $ids = $request->getParameter('ids');
 
@@ -59,6 +59,6 @@
       $record->delete();
     }
 
-    $this->getUser()->setFlash('notice', 'El item seleccionado ha sido eliminado con exito.');
+    $this->getUser()->setFlash('notice', 'Los items seleccionados han sido eliminados con exito.');
     $this->redirect('@<?php echo $this->getUrlForAction('list') ?>');
   }

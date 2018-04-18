@@ -2,18 +2,16 @@
 
 require_once('/../../../vendor/qz/src/libs/Formato.php');
 
-
-
-    // $info = array('nombre' => 'CORRESPONDENCIA ATLAS',
-    // 'contacto' => 'Pablo Perez',
-    // 'cliente' => 'ATLAS S.A.S.',
-    // 'cliente_telf' => '+57 555 5555555',
-    // 'cliente_mail' => 'contacto@atlas.com.con',
-    // 'cliente_dir' => 'Cra. 1, #50-2. Valle del Cauca, Cali',
-    // 'remitente' => '3 Creatives, S.A.S.',
-    // 'remitente_telf' => '+57 (2) 524 5606',
-    // 'remitente_dir' => 'Calle 39N, #4-13B.',
-    // );
+    $info = array('nombre' => 'CORRESPONDENCIA ATLAS',
+    'contacto' => 'Pablo Perez',
+    'cliente' => 'ATLAS S.A.S.',
+    'cliente_telf' => '+57 555 5555555',
+    'cliente_mail' => 'contacto@atlas.com.con',
+    'cliente_dir' => 'Cra. 1, #50-2. Valle del Cauca, Cali',
+    'remitente' => '3 Creatives, S.A.S.',
+    'remitente_telf' => '+57 (2) 524 5606',
+    'remitente_dir' => 'Calle 39N, #4-13B.',
+    );
 
     $impresora = 'TSC TTP-244 Pro';
     $format = new Formato($info);
