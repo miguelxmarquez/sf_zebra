@@ -19,14 +19,13 @@ class Plantilla extends BasePlantilla
 
 	public function Imprimir($ids){	
 		// Obtiene la fecha
-		$now = date('Y-m-d h:i:s A', time());
-		// Asigna Ids a Parametros
-		$parametros = implode(',', $ids);
+		$now = date('Y-m-d H:i:s', time());
 		// Nombre Temporal
-		$nombre = 'Plantilla '; 		
-		// Asigna valores a modelo
-		$this->setNombre($nombre.$now);
-		$this->setParametros($parametros);
+		$nombre = 'Plantilla ';
+		$last = date('Y-m-d h:i:s A', time());
+		// Asigna valores a modelo Plantilla
+		$this->setNombre($nombre.$last);
+		$this->setParametros($ids);
 		$this->setUpdatedAt($now);		
 		$this->save();
 		

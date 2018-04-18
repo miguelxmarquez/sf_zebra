@@ -9,7 +9,7 @@ default:
     #title:        symfony project
     #description:  symfony project
     #keywords:     symfony, project
-    language:     es
+    language:      es
     #robots:       index, follow
 
   stylesheets:    [bootstrap.css]

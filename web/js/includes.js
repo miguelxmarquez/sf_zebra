@@ -1,16 +1,20 @@
 // web/js/includes.js
 $(document).ready(function(){
+
     $("select").change(function(){
+
         var opcion = $("select option:selected").text();
+        
         if (opcion == "Imprimir") {
 
-            $("#loader").show();
-            
-            var imprime = confirm("Desea Imprimir las Etiquetas? La seleccion sera enviada a la impresora Zebra " +
-                                  " y automaticamente sera creada la plantilla con los elementos seleccionados");
+            var imprime = confirm("Desea Imprimir las Etiquetas? La seleccion sera enviada a la"+
+                                  " impresora Zebra y automaticamente sera creada la plantilla" +
+                                  " con los elementos seleccionados");
             if (imprime == true) {
-
-            var printer = "<?php echo $nombre_impresora; ?>";
+            
+                $("#loader").show();
+            
+                var printer = "<?php echo $nombre_impresora; ?>";
                 
                 qz.security.setCertificatePromise(function (resolve, reject) {
                     resolve("-----BEGIN CERTIFICATE-----\n" +
@@ -52,6 +56,6 @@ $(document).ready(function(){
                 });
                 
             }
-        }
+        } 
     });
 });
