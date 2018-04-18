@@ -45,8 +45,8 @@ class Formato {
         $this->remitente = $remitente;
         $this->remitente_telf = $remitente_telf;
         $this->remitente_dir = $remitente_dir;
-        $this->date = $date;
-        $this->time = $time;
+        // $this->date = $date;
+        // $this->time = $time;
 
     }
 
@@ -212,13 +212,6 @@ class Formato {
     /*
      *
      */
-
-    private function info()
-    {
-      # code...
-      return true;
-    }
-
     public function generate() {
         //Genera la linea que se utiliza como separador;
         $this->generateLine();
