@@ -4,14 +4,14 @@
 
     if (!$ids = $request->getParameter('ids'))
     {
-      $this->getUser()->setFlash('error', 'You must at least select one item.');
+      $this->getUser()->setFlash('error', 'Debe seleccionar al menos un item');
 
       $this->redirect('@<?php echo $this->getUrlForAction('list') ?>');
     }
 
     if (!$action = $request->getParameter('batch_action'))
     {
-      $this->getUser()->setFlash('error', 'You must select an action to execute on the selected items.');
+      $this->getUser()->setFlash('error', 'Debe seleccionar una accion para ejecutar en los items seleccionados.');
 
       $this->redirect('@<?php echo $this->getUrlForAction('list') ?>');
     }
@@ -37,7 +37,7 @@
     }
     catch (sfValidatorError $e)
     {
-      $this->getUser()->setFlash('error', 'A problem occurs when deleting the selected items as some items do not exist anymore.');
+      $this->getUser()->setFlash('error', 'Ha ocurrido un problema mientras se eliminaban los items seleccionados, algunos items ya no existen.');
     }
 
     $this->redirect('@<?php echo $this->getUrlForAction('list') ?>');
@@ -59,6 +59,6 @@
       $record->delete();
     }
 
-    $this->getUser()->setFlash('notice', 'The selected items have been deleted successfully.');
+    $this->getUser()->setFlash('notice', 'El item seleccionado ha sido eliminado con exito.');
     $this->redirect('@<?php echo $this->getUrlForAction('list') ?>');
   }
