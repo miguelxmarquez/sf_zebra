@@ -21,25 +21,21 @@ class etiquetaActions extends autoEtiquetaActions
         $plantilla = new Plantilla();
         // Ordena Arreglo para Impresion
         asort($ids);
-        $arreglo = $this->ImprimeTag($ids);
-        $parametros = implode(',' , $ids);
-          
-      	if ($plantilla->Imprimir($parametros) !== FALSE) {
-            // Envia mensaje de ejecucion exitosa
-            $this->getUser()->setFlash('notice', 'La seleccion de Etiquetas: { ' . $parametros . ' } sera enviada a la impresora Zebra');
-            // Redirige a Modulo Plantilla
-            $this->redirect('plantilla');
-            include_partial('global/tmp');
+        $arreglo = $this->Imprime($ids);
+        $ids = implode(', ' , $ids);
 
-        }else{
-            // Envia mensaje de ejecucion erronea
-            $this->getUser()->setFlash('error', 'La seleccion de Etiquetas: { ' . $parametros . ' } Ha sufrido un Error, intente mas tarde');
-            // Redirige a Modulo Etiqueta
-            $this->redirect('etiqueta');
-        }
+        $this->getUser()->setAttribute('parametros', $arreglo);  
+       	
+        // Envia mensaje de ejecucion exitosa
+        $this->getUser()->setFlash('notice', 'La seleccion de Etiquetas: { ' . $ids . ' } sera enviada a la impresora Zebra');
+        // Redirige a Modulo Plantilla
+        $this->redirect('plantilla');
+        //include_partial('global/tmp');
+
+        
     }
     
-    public function ImprimeTag($ids)
+    public function Imprime($ids)
     {
         # Recorremos todos los registros
         foreach ($ids as $key => $value) {
@@ -54,7 +50,7 @@ class etiquetaActions extends autoEtiquetaActions
         ->orderBy('e.created_at ASC');
         $result = $query->execute();
         }
-
+        //return sfView::SUCCESS;
         return $result->toArray();
     }
 }

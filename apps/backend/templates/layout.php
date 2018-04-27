@@ -8,11 +8,7 @@
     <?php include_javascripts() ?>
     <?php include_stylesheets() ?>
   </head>
-  <script>
-        
   
-
-    </script>
   <body>
   <?php include_partial('global/tmp') ?>
     <div class="w3-display-container">

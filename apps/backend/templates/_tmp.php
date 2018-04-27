@@ -1,4 +1,6 @@
 <?php 
+
+$sf_user->getAttribute('parametros');
 // Qz Library ******************************************
 require_once('/../../../vendor/qz/src/libs/Formato.php');
 
@@ -67,6 +69,6 @@ require_once('/../../../vendor/qz/src/libs/Formato.php');
 
 <body >
 
-<p onclick="imprimir();">Print Now</p>
+<!-- <p onclick="imprimir();">Print Now</p> -->
 
 </body>
