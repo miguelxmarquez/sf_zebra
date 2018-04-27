@@ -44,7 +44,12 @@ require_once __DIR__.'/../vendor/autoload.php';
 sf_projects\zebra>php symfony cache:clear
 
 
-
+// Si quieres dehacer el último commit de tu respositorio local:
+git reset --hard HEAD~1
+// Si además hemos hecho push y queremos deshacerlo:
+git push origin HEAD --force
+// NOTA: si alguien ha hecho pull después de ese push que vamos a borrar, hay que hacer más cosas. Para esto mirad la fuente de debajo.
+// Fuente: http://stackoverflow.com/questions/1338728/how-to-delete-a-git-commit
 
 
 EXPORTAR:
